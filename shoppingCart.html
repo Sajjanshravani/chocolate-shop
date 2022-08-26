@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Chocolate Shop</title>
+		<link rel="stylesheet" href="css/shoppingCart.css" />
+		<link href="https://fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/shoppingCart.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+	</head>
+	<body>
+		 <div id="pop-div" class="pop-box">
+        <div style="width: 400px; height: 300px; float: right">
+        	<h2 style="font-family: forte;color: #66512C;font-size:20px;position: absolute;top: 15px;left: 110px;">PEPPA CHOCOLATE</h2>
+            <img alt="" src="img/pay.png" onclick="hideDiv('pop-div');" style="width: 180px;height: 180px;position: absolute;top: 40px;left: 110px;" />
+        </div>
+        <div class="pop-box-body">
+         	<p style="font-family: arial;font-size: 25px;color: #A61715;position: absolute;top: 230px;">Please pay by scanning the qr code</p>
+        </div>
+    </div>
+		<nav class="fixed-nav-bar">
+			<!-- Fixed Navigation bar content -->
+			<ul id="f">
+				<a href="loginSuccessfully.html">
+					<li style="float: left; font-size: 46px; margin-left: 30px;margin-top: 10px;">
+						<font size="30px" color="gold">P</font>
+						<font color="goldenrod">eppa</font>
+						<font size="30px" color="gold">C</font>
+						<font color="goldenrod">hcolate</font>
+					</li>
+				</a>
+				<img src="img/chocolate.png" style="width: 100px;margin-top: 10px;" />
+				<li id="h" class="drop-down" style="margin-right: 70px;">
+					<span id="c">Admin</span>	
+					<ul class="drop-down-content">
+					<li style="background: rgba(106,86,56,0.6);">
+					<a href="shoppingCart.html">ShoppingCart</a>
+					</li>
+				    <li style="background: rgba(106,86,56,0.6);">
+					<a href="index.html">Log Off</a>
+					</li>
+					</ul>
+				</li>
+				<img src="img/admin.png" style="position: absolute;top: 25px;right: 55px;width: 40px;height: 40px;"/>
+				<li id="h" >
+					<span id="c" href="gift.html">Gifts</span>
+				</li>
+				<li id="h" >
+					<span id="c" href="flavor.html">Flavor</span>
+				</li>
+			</ul>
+		</nav>
+  <div id="w">
+    <header id="title">
+      <h1>My Chocolate Shopping Cart</h1>
+    </header>
+    <div id="page">
+      <table id="cart">
+        <thead>
+          <tr>
+            <th class="first">Product</th>
+            <th class="second">Quantity</th>
+            <th class="third">Description</th>
+            <th class="fourth">Price</th>
+            <th class="fifth">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- shopping cart contents -->
+          <tr class="productitm">
+            <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
+            <td><img src="img/shopping1.jpg" class="thumb" width="50%"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>A sweet gift for the season</td>
+            <td>Rs680</td>
+            <td><span class="remove"><img src="img/trashCan.png" alt="X"></span></td>
+          </tr>
+          <tr class="productitm">
+            <!-- http://www.amazon.com/Stuff-My-Cat-The-Book/dp/0811855384 -->
+            <td><img src="img/shopping2.jpg" class="thumb" width="50%"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Delight someone special with a box</td>
+            <td>Rs868</td>
+            <td><span class="remove"><img src="img/trashCan.png" alt="X"></span></td>
+          </tr>
+          <tr class="productitm">
+            <!-- http://www.amazon.com/SpongeBob-SquarePants-The-First-Episodes/dp/B002DYJTVW -->
+            <td><img src="img/shopping3.jpg" class="thumb" width="50%"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Perfect for Dark Chocolate Lovers</td>
+            <td>Rs500</td>
+            <td><span class="remove"><img src="img/trashCan.png" alt="X"></span></td>
+          </tr>
+          <!-- tax + subtotal -->
+          <tr class="extracosts">
+            <td class="light">Shipping &amp; Tax</td>
+            <td colspan="2" class="light"></td>
+            <td>Rs1000</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="totalprice">
+            <td class="light">Total:</td>
+            <td colspan="2">&nbsp;</td>
+            <td colspan="2"><span style="color: crimson;" class="thick">Rs2268</span></td>
+          </tr>
+          
+          <!-- checkout btn -->
+          <tr class="checkoutrow">
+            <td colspan="5"><a class="button" onclick="popupDiv('pop-div');">CHECKOUT NOW</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+	</body>
+</html>

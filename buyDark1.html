@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Chocolate Shop</title>
+		<link rel="stylesheet" href="css/buyDark1.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="https://fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css">
+		<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/buyDark1.js"></script>
+	</head>
+
+	<body>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="position: fixed;top: 250px;left: 500px;">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel" style="color: #66512C;">Thanks For Your Remarks</h4>
+					</div>
+					<div class="modal-body">
+						You can write here···<br /><br /><br />
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn" style="background-color: gold;">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="pop-div" class="pop-box">
+			<div style="width: 400px; height: 300px; float: right">
+				<img alt="" src="img/success.png" onclick="hideDiv('pop-div');" style="width: 100px;height: 100px;position: absolute;top: 80px;left: -20px;" />
+			</div>
+			<div class="pop-box-body">
+				<p style="font-family: arial;font-size: 20px;color: #66512C;position: absolute;top: 180px;left: -50px;">Add Successfully</p>
+			</div>
+		</div>
+
+		<nav class="fixed-nav-bar">
+			<!-- Fixed Navigation bar content -->
+			<ul id="f">
+				<a href="loginSuccessfully.html">
+					<li style="float: left; font-size: 46px; margin-left: 30px;margin-top: 10px;">
+						<font size="30px" color="gold">P</font>
+						<font color="goldenrod">eppa</font>
+						<font size="30px" color="gold">C</font>
+						<font color="goldenrod">hcolate</font>
+					</li>
+				</a>
+				<img src="img/chocolate.png" style="width: 100px;margin-top: 10px;" />
+				<li id="h" class="drop-down" style="margin-right: 70px;">
+					<span id="c">Admin</span>
+					<ul class="drop-down-content">
+						<li style="background: rgba(106,86,56,0.6);">
+							<a href="shoppingCart.html">ShoppingCart</a>
+						</li>
+						<li style="background: rgba(106,86,56,0.6);">
+							<a href="index.html">Log Off</a>
+						</li>
+					</ul>
+				</li>
+				<img src="img/admin.png" style="position: absolute;top: 25px;right: 55px;width: 40px;height: 40px;" />
+				<li id="h">
+					<a id="c" href="gift.html">Gifts</a>
+				</li>
+				<li id="h">
+					<a id="c" href="flavor.html">Flavor</a>
+				</li>
+			</ul>
+		</nav>
+
+		<<div class="container" style="position: absolute;top: 150px;left: 150px;">
+			<div class="col-lg-7 col-md-7">
+				<div id="myCarousel" class="carousel slide">
+					<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+					</ol>
+					<!-- 轮播（Carousel）项目 -->
+					<div class="carousel-inner" style="width: 500px;">
+						<div class="item active" style="width: 500px;">
+							<a href=""><img src="img/buy.jpg" alt="First slide"></a>
+						</div>
+						<div class="item" style="width: 500px;">
+							<a href=""><img src="img/buy2.jpg" alt="Second slide"></a>
+						</div>
+						<!-- 轮播（Carousel）导航 -->
+						<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;
+						</a>
+						<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4">
+				<h3 style="font-weight: bold;color: darkgoldenrod;">Dark Decadence Truffle Flight, 6 pc.</h3>
+				<span style="color: darkgoldenrod;font-size:larger;">Rs&nbsp;<span style="color: orangered;font-size: xx-large;">1700.00</span></span>
+				<hr />
+				<p style="font-family: 'agency fb';font-size: 25px;color: #66512C;">Perfect for Dark Chocolate Lovers, our Dark Decadence Truffle Flight is a sensory journey that includes our finest dark chocolate truffles with heavenly fillings and unique flavors.</p>
+				<img src="img/star.png" width="10%" style="position: absolute;" />
+				<img src="img/star.png" width="10%" style="position: absolute;left: 50px;" />
+				<img src="img/star.png" width="10%" style="position: absolute;left: 85px;" />
+				<img src="img/star.png" width="10%" style="position: absolute;left: 120px;" />
+				<img src="img/star.png" width="10%" style="position: absolute;left: 155px;" />
+				<a style="position: absolute;left: 200px;color: #66512C;text-decoration: none;">(5.0)</a>
+				<a id="z" class="btn" data-toggle="modal" data-target="#myModal" style="position: absolute;left: 260px;bottom: 130px;color: goldenrod;">Write a review</a>
+				<br />
+				<hr />
+
+				<button class="btn" style="width: 200px;background-color: orangered;color: white;text-align: center;font-size: 20px;" onclick="popupDiv('pop-div');">Add To Cart</button><br /><br />
+				<button class="btn" style="width: 200px;background-color: gold;color: white;text-align: center;font-size: 20px;">Save To Wish List</button>
+			</div>
+
+			</div>
+			<div id="col-lg-1 col-md-1">
+
+			</div>
+	</body>
+
+</html>

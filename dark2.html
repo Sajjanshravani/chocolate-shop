@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Chocolate Shop</title>
+		<link rel="stylesheet" href="css/dark2.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="https://fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<nav class="fixed-nav-bar">
+			<!-- Fixed Navigation bar content -->
+			<ul id="f">
+				<a href="loginSuccessfully.html">
+					<li style="float: left; font-size: 46px; margin-left: 30px;margin-top: 10px;">
+						<font size="30px" color="gold">P</font>
+						<font color="goldenrod">eppa</font>
+						<font size="30px" color="gold">C</font>
+						<font color="goldenrod">hcolate</font>
+					</li>
+				</a>
+				<img src="img/chocolate.png" style="width: 100px;margin-top: 10px;" />
+				<li id="h" class="drop-down" style="margin-right: 70px;">
+					<span id="c">Admin</span>
+					<ul class="drop-down-content">
+						<li style="background: rgba(106,86,56,0.6);">
+							<a href="shoppingCart.html">ShoppingCart</a>
+						</li>
+						<li style="background: rgba(106,86,56,0.6);">
+							<a href="index.html">Log Off</a>
+						</li>
+					</ul>
+				</li>
+				<img src="img/admin.png" style="position: absolute;top: 25px;right: 55px;width: 40px;height: 40px;" />
+				<li id="h">
+					<a id="c" href="gift.html">Gifts</a>
+				</li>
+				<li id="h">
+					<a id="c" href="flavor.html">Flavor</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="container">
+			<div class="row" style="position: absolute;top: 120px;">
+				<div class="col-lg-2">
+					<a style="font-family: 'franklin gothic book';font-size: 25px;color: #66512C; position: absolute;top:220px; left: -150px;">Flavor&nbsp;>>Dark>Page 2</a>
+				</div>
+				<div class="col-lg-7">
+					<img src="img/darkn.jpg" style="border:1px solid #fff; border-radius: 15px;position: relative;" />
+				</div>
+
+				<div id="shopping-cart" class="col-lg-3">
+					<div id="info">
+						<span id="itens"><strong>0</strong></span>
+						<span>Items</span> |
+						<span id="total">Total: Rs <strong>0</strong></span>
+					</div>
+					<div class='lista'>
+						<ul>
+							<li class='empty' style="font-family: arial;">Enjoying your shopping time !</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="layout">
+				<section class="inner">
+					<ul class="grid">
+						<div class="row">
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark17.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Milk and Dark Chocolate</span>
+												<span class="pnl-price">Rs28,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark18.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Dark Chocolate Truffles</span>
+												<span class="pnl-price">Rs52,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark19.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label"> Individually Wrapped Large Bag</span>
+												<span class="pnl-price">Rs70,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark20.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Mint Dark Chocolate Bar</span>
+												<span class="pnl-price">Rs72,20</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark21.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Assortment Gift Box</span>
+												<span class="pnl-price">Rs37,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark22.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Ganache Heart Bar</span>
+												<span class="pnl-price">Rs180,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark23.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Orange & Ginger Bar</span>
+												<span class="pnl-price">Rs8,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark24.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Truffles Gift Box</span>
+												<span class="pnl-price">Rs56,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark25.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Murder on the Orient</span>
+												<span class="pnl-price">Rs25,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark26.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Patisserie Dessert Truffles</span>
+												<span class="pnl-price">Rs32,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark27.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Dark Chocolate Truffles</span>
+												<span class="pnl-price">Rs32,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark28.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Sea Salt Bar </span>
+												<span class="pnl-price">Rs28,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark29.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Truffle Lover's Gift Set</span>
+												<span class="pnl-price">Rs58,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark30.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Pack of 24</span>
+												<span class="pnl-price">Rs68,90</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark31.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Chocolate-Filled Star</span>
+												<span class="pnl-price">Rs8,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+							<div class="col-lg-3">
+								<li class="grid-tile">
+									<div class="item">
+										<div class="item-img" style="background-image: url(img/dark32.jpg); background-size: cover;"></div>
+										<div class="pnl-wrapper">
+											<div class="pnl-description">
+												<span class="pnl-label">Chocolate Truffle Santa Box</span>
+												<span class="pnl-price">Rs12,00</span>
+												<img src="img/shoppingCart2.png" style="width: 10%;position: absolute;bottom:15px;right: 20px;" />
+											</div>
+
+										</div>
+									</div>
+								</li>
+							</div>
+						</div>
+					</ul>
+				</section>
+			</div>
+			<div class="row">
+			<ul class="pagination">
+  <li><a href="#">«</a></li>
+  <li><a href="dark.html">1</a></li>
+  <li><a class="active" href="dark2.html">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">»</a></li>
+</ul></div>
+		</div>
+		<div class="row">
+			<br /><br />
+		</div>
+	</body>
+
+</html>

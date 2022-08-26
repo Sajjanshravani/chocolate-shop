@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Chocolate Shop</title>
+		<meta name="" content="">
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="https://fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/core.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<img src="img/aboutUs.jpg" />
+			</div>
+		</div>
+
+		<nav class="fixed-nav-bar">
+			<!-- Fixed Navigation bar content -->
+			<ul>
+				<a href="index.html">
+					<li style="float: left; font-size: 46px; margin-left: 30px;margin-top: 10px;">
+						<font size="30px" color="gold">P</font>
+						<font color="goldenrod">eppa</font>
+						<font size="30px" color="gold">C</font>
+						<font color="goldenrod">hocolate</font>
+					</li>
+				</a>
+				<img src="img/chocolate.png" style="width: 100px;margin-top: 10px;" />
+				<li id="h" style="margin-right: 30px;">
+					<a href="login.html">Login/Register</a>
+				</li>
+				<li id="h" >
+					<a href="gift.html">Gifts</a>
+				</li>
+				<li id="h" >
+					<a href="flavor.html">Flavor</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="header" style="z-index: 1;position: absolute;">
+			<div class="carousel">
+				<ul class="img-ct">
+
+					<li class="item">
+						<div class="cover" data-bg-img="img/background1.jpg"></div>
+						<div class="main">
+							<p id="light"><a>Buy More Save More</a></p>
+							<p>When you shop PEPPA this Christmas,the more you spend,the more you save.</p><br /><br />
+							<a href="flavor.html" class="action-button shadow animate yellow">Buy Now</a>
+						</div>
+					</li>
+					<li class="item">
+						<div class="cover" data-bg-img="img/background2.jpg"></div>
+						<div class="main">
+							<p id="light"><a>To the people you love most</a></p>
+							<p>and its not just a sweet,let everyday have a little bit of christmas magic </p><br /><br />
+							<a href="gifts.html" class="action-button shadow animate yellow">More Products</a>
+						</div>
+					</li>
+					<li class="item">
+						<div class="cover" data-bg-img="img/background3.jpg"></div>
+						<div class="main">
+							<p id="light"><a>MR·GOODBAR</a></p>
+							<p>A product that combines<br>peanuts and milk chocolate When Mr Page tasted this chocolate for the first time,he blurted out: "This is Delicious chocolate!"&nbsp;"Now，that‘s a good bar !" </p><br /><br />
+							<a href="story.html" class="action-button shadow animate yellow">Story</a>
+						</div>
+					</li>
+					<li class="item">
+						<div class="cover" data-bg-img="img/background4.jpg"></div>
+						<div class="main">
+							<p id="light"><a>Creat classic We go together</a></p>
+							<p>Peppa Chocolate's success lies not only in the wisdom,talent and enthusiasm of its owners,but also in part with their kindness,nobility and unique insights, which make  Peppa Chocolate's name shine brighter than the logo of any brand.</p><br /><br />
+
+							
+						</div>
+					</li>
+					<li class="item">
+						<div class="cover" data-bg-img="img/background5.jpg"></div>
+						<div class="main">
+							<p id="light"><a>High quality Thick love</a></p>
+							<p>By mixing and roasting cocoa beans from different countries Peppa Chocolate's taste remains unique</p><br /><br />
+							
+						</div>
+					</li>
+				</ul>
+				<ul class="bullet">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			var $ct = $('.img-ct'),
+				$items = $ct.children(),
+				$pre = $('.pre'),
+				$next = $('.next'),
+				$bullet = $('.bullet'),
+				imgWidth = $(window).width(),
+				imgCount = $ct.children().size();
+
+			$ct.prepend($items.last().clone());
+			$ct.append($items.first().clone());
+			$ct.find('.item').css('width', imgWidth);
+			$ct.find('.cover').css('width', imgWidth);
+			imgRealCount = $ct.children().size();
+			$ct.css({ left: 0 - imgWidth, width: imgRealCount * imgWidth })
+
+			var curIdx = 0;
+			var isAnimate = false;
+
+			$bullet.find('li').on('click', function() {
+				var idx = $(this).index();
+				if(idx > curIdx) {
+					playNext(idx - curIdx);
+				} else if(idx < curIdx) {
+					playPre(curIdx - idx);
+				}
+			});
+
+			setBg(1);
+			autoPlay();
+
+			function stopAuto() {
+				clearInterval(clock);
+			}
+
+			function autoPlay() {
+				clock = setInterval(function() {
+					playNext();
+				}, 3000);
+			}
+
+			function playNext(idx) {
+				var idx = idx || 1;
+				if(!isAnimate) {
+					isAnimate = true;
+					setBg(curIdx + 2);
+					$ct.animate({ left: '-=' + (imgWidth * idx) }, function() {
+						curIdx = (curIdx + idx) % imgCount;
+						if(curIdx === 0) {
+							$ct.css({ left: 0 - imgWidth });;
+						}
+						isAnimate = false;
+						setBullet();
+					});
+				}
+			}
+
+			function playPre(idx) {
+				var idx = idx || 1;
+				if(!isAnimate) {
+					isAnimate = true;
+					setBg(curIdx);
+					$ct.animate({ left: '+=' + (imgWidth * idx) }, function() {
+						curIdx = (imgCount + curIdx - idx) % imgCount;
+						if(curIdx === (imgCount - 1)) {
+							$ct.css({ left: 0 - imgWidth * imgCount });;
+						}
+						isAnimate = false;
+						setBullet();
+					});
+				}
+			}
+
+			function setBg(idx) {
+				var idx = idx || 0,
+					$node = $ct.children().eq(idx)
+				$cover = $node.find('.cover'),
+					imgUrl = $cover.attr('data-bg-img');
+				if($node.data('isBgSet')) return;
+				$cover.css('background-image', 'url(' + imgUrl + ')');
+				$node.data('isBgSet', true);
+
+			}
+
+			function setBullet() {
+				$bullet.children().removeClass('active')
+					.eq(curIdx).addClass('active');
+			}
+
+			$('#myModal').on('shown.bs.modal', function() {
+				$('#myInput').focus()
+			})
+		</script>
+
+	</body>
+
+</html>
